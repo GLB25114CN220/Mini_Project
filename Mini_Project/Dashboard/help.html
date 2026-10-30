@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help &amp; Policies | GL Bajaj Dress Management</title>
+<style>
+  :root { --navy: #10182b; --gold: #d4a437; --bg: #f4f5f9; --line: #e3e6ee; --muted: #6b7280; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--navy); font: 15px/1.65 "Segoe UI", Roboto, -apple-system, Arial, sans-serif; }
+  .bar { background: var(--navy); color: #fff; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-bottom: 4px solid var(--gold); }
+  .bar b { font-size: 16px; }
+  .bar a { color: var(--gold); font-weight: 700; text-decoration: none; }
+  .wrap { width: min(900px, 92%); margin: 0 auto; padding: 30px 0 10px; }
+  h1 { margin: 0 0 4px; font-size: 30px; }
+  .lead { color: var(--muted); margin: 0 0 22px; }
+  .jump { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  .jump a { padding: 6px 14px; border-radius: 999px; background: #e9edf4; color: var(--navy); font-weight: 600; font-size: 13px; text-decoration: none; }
+  .jump a:hover { background: var(--gold); }
+  section { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin-bottom: 16px; scroll-margin-top: 16px; }
+  section:target { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212,164,55,.25); }
+  h2 { margin: 0 0 10px; font-size: 20px; }
+  ol, ul { margin: 0; padding-left: 22px; }
+  li { margin: 5px 0; }
+  details { border-top: 1px solid var(--line); padding: 10px 0; }
+  details:first-of-type { border-top: 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 8px 0 0; color: #3d4659; }
+  .note { font-size: 13px; color: var(--muted); margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="bar"><b>GL Bajaj Dress Management</b><a href="javascript:history.length > 1 ? history.back() : (location.href = 'index.html')">← Back to the portal</a></div>
+
+<main class="wrap">
+  <h1>Help &amp; Policies</h1>
+  <p class="lead">Everything you need to book your college uniform, and how we look after your information.</p>
+  <nav class="jump">
+    <a href="#guidelines">Booking Guidelines</a><a href="#returns">Return Policy</a><a href="#faqs">FAQs</a>
+    <a href="#privacy">Privacy Policy</a><a href="#terms">Terms of Use</a>
+  </nav>
+
+  <section id="guidelines">
+    <h2>Booking Guidelines</h2>
+    <ol>
+      <li>Sign in with the admission ID given by the college.</li>
+      <li>Open <b>Dress Catalog</b> (or the Winter / Summer uniform pages) and choose the item and your size.</li>
+      <li>Add the items to your <b>Shopping Cart</b> and submit them as one request.</li>
+      <li>The Dress Management office reviews the request: it becomes <b>Approved</b> (or Rejected) and is then <b>Dispatched</b> when you receive it.</li>
+      <li>Follow every step under <b>My Orders</b>. Stock is reduced only when a request is dispatched.</li>
+    </ol>
+  </section>
+
+  <section id="returns">
+    <h2>Return Policy</h2>
+    <ul>
+      <li>For a wrong size, a damaged item or a return, send a message through <a href="student_query.html">Student Query</a> with your request ID.</li>
+      <li>Please keep items unused and in their original condition until the office confirms the exchange or return.</li>
+      <li>The Dress Management office decides each case and replies to your query.</li>
+    </ul>
+    <p class="note">The college can edit this text in <code>help.html</code> to match its final policy.</p>
+  </section>
+
+  <section id="faqs">
+    <h2>FAQs</h2>
+    <details><summary>My admission ID does not work. What should I do?</summary><p>Contact the Dress Management office. Your ID must be registered by the college before you can sign in. You may type it with or without dashes.</p></details>
+    <details><summary>How do I know if my request was approved?</summary><p>Open <b>My Orders</b>. The status changes from Pending to Approved, Dispatched or Rejected.</p></details>
+    <details><summary>Can I change my size after submitting?</summary><p>Send a message through Student Query with your request ID and the size you need.</p></details>
+    <details><summary>Where do I ask other questions?</summary><p>Use <a href="student_query.html">Contact Support</a> (the Student Query form). The office replies there.</p></details>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>The system keeps only what is needed to manage uniform requests: your name, roll number, branch, section, year, admission ID and your requests and queries. This data is used by the Dress Management office and is not shared outside the college. Passwords of administrators are stored in hashed form.</p>
+  </section>
+
+  <section id="terms">
+    <h2>Terms of Use</h2>
+    <p>This portal is for students and staff of GL Bajaj Institute of Technology and Management. Use your own admission ID, give correct details in requests and queries, and do not try to access areas meant for administrators. The college may update these terms and the portal as its needs change.</p>
+  </section>
+</main>
+
+<script>window.GLB_ACCESS = 'public';</script>
+<script src="js/api.js"></script>
+</body>
+</html>

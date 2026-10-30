@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Requests — Rejected | GL Bajaj ITM</title>
+<link rel="stylesheet" href="requests.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- ---------- Sidebar ---------- -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">GL</div>
+      <div>
+        <div class="brand-name">GL Bajaj ITM</div>
+        <div class="brand-sub">DRESS MANAGEMENT</div>
+      </div>
+    </div>
+
+    <ul class="side-nav" data-nav="requests"></ul>
+
+    <div class="admin-portal">
+      <div class="admin-avatar">AD</div>
+      <div>
+        <div>Admin Portal</div>
+        <div class="admin-email">admin@glbajaj.ac.in</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ---------- Main content ---------- -->
+  <main class="main">
+    <div class="top-bar">
+      <span>GL BAJAJ INSTITUTE OF TECHNOLOGY AND MANAGEMENT</span>
+      <span>Academic Year: 2025–26<span class="year-dot"></span></span>
+    </div>
+
+    <h1 class="page-title">Requests</h1>
+    <p class="page-subtitle">Manage uniform requests from students</p>
+
+    <nav class="tabs">
+      <a href="All_requests.html">All</a>
+      <a href="Pending.html">Pending</a>
+      <a href="Approved.html">Approved</a>
+      <a href="Dispatched.html">Dispatched</a>
+      <a href="Rejected.html" class="active">Rejected</a>
+    </nav>
+
+    <div class="table-card">
+      <table class="requests-table">
+        <thead>
+          <tr>
+            <th>Request ID</th>
+            <th>Student</th>
+            <th>Roll No.</th>
+            <th>Item</th>
+            <th>Size</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="requests-body" data-status="rejected"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+<script>window.GLB_ACCESS = 'admin';</script>
+<script src="js/api.js"></script>
+<script src="js/requests.js"></script>
+</body>
+</html>

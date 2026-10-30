@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Query Form | GL Bajaj ITM</title>
+<link rel="stylesheet" href="student_query.css">
+</head>
+<body>
+<!-- Back button: top-left corner. Its text and target are set for the logged-in role (see script below). -->
+<a href="dashboard.html" class="back-link" id="backLink">&larr; Back</a>
+<button type="button" class="logout-link" id="logoutBtn">Logout</button>
+
+<div class="page-wrap">
+
+  <header class="form-header">
+    <div class="brand-row">
+      <div class="brand-mark">GL</div>
+      <span>GL Bajaj Institute of Technology and Management</span>
+    </div>
+    <h1>Student Query Form</h1>
+    <p>Have a question or issue about uniform ordering, sizing, or a request status? Fill in the details below and the Dress Management team will get back to you.</p>
+  </header>
+
+  <div class="form-card">
+    <form id="queryForm" novalidate>
+
+      <!-- ---------- Section 1: Student Details ---------- -->
+      <details class="form-section" open>
+        <summary>
+          <span class="summary-text">
+            Student Details
+            <span class="summary-hint">Who is this query from?</span>
+          </span>
+          <span class="chevron">▸</span>
+        </summary>
+        <div class="section-body">
+
+          <div class="field" id="admissionRow" hidden>
+            <label for="admissionShow">Admission ID</label>
+            <input type="text" id="admissionShow" readonly>
+            <span class="field-hint">You entered this ID to open the Student Block. Your details below are filled in from it.</span>
+          </div>
+
+          <div class="field">
+            <label class="required" for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="e.g. Aryan Sharma" required>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="required" for="rollNo">Roll Number</label>
+              <input type="text" id="rollNo" name="rollNo" placeholder="e.g. 2100980310001" required>
+            </div>
+            <div class="field">
+              <label class="required" for="branch">Branch / Department</label>
+              <select id="branch" name="branch" required>
+                <option value="" disabled selected>Select branch</option>
+                <option>Computer Science</option>
+                <option>Information Tech.</option>
+                <option>Electronics</option>
+                <option>Mechanical</option>
+                <option>Civil</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="required" for="year">Academic Year</label>
+              <select id="year" name="year" required>
+                <option value="" disabled selected>Select year</option>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="required" for="email">College Email</label>
+              <input type="email" id="email" name="email" placeholder="name@glbajaj.ac.in" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number">
+            <span class="field-hint">Optional — only if you'd like a callback.</span>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- ---------- Section 2: Query Details ---------- -->
+      <details class="form-section" open>
+        <summary>
+          <span class="summary-text">
+            Query Details
+            <span class="summary-hint">Tell us what this is about</span>
+          </span>
+          <span class="chevron">▸</span>
+        </summary>
+        <div class="section-body">
+
+          <fieldset class="field">
+            <legend class="required">Query Category</legend>
+            <div class="option-list">
+              <label class="option-item">
+                <input type="radio" name="category" value="Dress Catalog" required>
+                Dress Catalog (item info, price, availability)
+              </label>
+              <label class="option-item">
+                <input type="radio" name="category" value="Request Status">
+                Request Status (pending / approved / dispatched)
+              </label>
+              <label class="option-item">
+                <input type="radio" name="category" value="Sizing & Exchange">
+                Sizing &amp; Exchange
+              </label>
+              <label class="option-item">
+                <input type="radio" name="category" value="Payment & Billing">
+                Payment &amp; Billing
+              </label>
+              <label class="option-item">
+                <input type="radio" name="category" value="Other">
+                Other
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="requestId">Related Request ID</label>
+            <input type="text" id="requestId" name="requestId" placeholder="e.g. REQ-2025-003">
+            <span class="field-hint">Optional — fill in if your query is about an existing request.</span>
+          </div>
+
+          <div class="field">
+            <label class="required" for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Short summary of your query" required>
+          </div>
+
+          <div class="field">
+            <label class="required" for="message">Describe your query</label>
+            <textarea id="message" name="message" placeholder="Explain your query in detail..." required></textarea>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- ---------- Section 3: Priority & Attachment ---------- -->
+      <details class="form-section">
+        <summary>
+          <span class="summary-text">
+            Priority &amp; Attachment
+            <span class="summary-hint">Optional, but helps us respond faster</span>
+          </span>
+          <span class="chevron">▸</span>
+        </summary>
+        <div class="section-body">
+
+          <fieldset class="field">
+            <legend>Urgency</legend>
+            <div class="option-list">
+              <label class="option-item">
+                <input type="radio" name="urgency" value="Low" checked>
+                Low — general question
+              </label>
+              <label class="option-item">
+                <input type="radio" name="urgency" value="Medium">
+                Medium — needs attention this week
+              </label>
+              <label class="option-item">
+                <input type="radio" name="urgency" value="High">
+                High — blocking issue, needs urgent help
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="attachment">Attach a photo or document</label>
+            <div class="file-input-wrap">
+              Upload a receipt, size chart, or photo related to your query.
+              <br>
+              <input type="file" id="attachment" name="attachment" accept="image/*,.pdf">
+            </div>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- ---------- Section 4: Consent & Submit ---------- -->
+      <details class="form-section" open>
+        <summary>
+          <span class="summary-text">
+            Confirm &amp; Submit
+            <span class="summary-hint">Last step</span>
+          </span>
+          <span class="chevron">▸</span>
+        </summary>
+        <div class="section-body">
+
+          <label class="consent-row">
+            <input type="checkbox" id="consent" name="consent" required>
+            I confirm the information provided above is accurate, and I consent to the Dress Management office storing and using it to respond to my query.
+          </label>
+
+          <div id="statusMsg" class="status-msg"></div>
+
+          <div class="submit-row">
+            <button type="submit" class="submit-btn" id="submitBtn">Submit Query</button>
+            <button type="reset" class="clear-btn">Clear form</button>
+          </div>
+
+        </div>
+      </details>
+
+    </form>
+  </div>
+
+  <p class="form-footer-note">GL Bajaj Institute of Technology and Management · Dress Management System</p>
+</div>
+
+<script>window.GLB_ACCESS = 'student';</script>
+<script src="js/api.js"></script>
+<script>
+  /* Student Query form.
+     - Opens for logged-in students AND admins (it belongs to the Student Block).
+     - The back button goes to the Dashboard for admins and to the Dress Catalog for students.
+     - Submitting saves the query in the database; admins read it in Admins Block -> Query Inbox. */
+  const form = document.getElementById("queryForm");
+  const statusMsg = document.getElementById("statusMsg");
+  const submitBtn = document.getElementById("submitBtn");
+  const backLink = document.getElementById("backLink");
+  const isAdmin = GLB.role === "admin";
+
+  backLink.href = GLB.home;
+  backLink.textContent = isAdmin ? "\u2190 Back to Dashboard" : "\u2190 Back to My Dashboard";
+  document.getElementById("logoutBtn").addEventListener("click", GLB.logout);
+
+  // Students: show the admission ID and fill in their own details from the student record.
+  function prefill() {
+    if (GLB.role !== "student") return;
+    document.getElementById("admissionRow").hidden = false;
+    document.getElementById("admissionShow").value = GLB.user.admission_id || "";
+    const st = GLB.user.student;
+    if (!st) return; // ID not linked to a student record yet: the student fills the fields in
+    const set = (id, value, lock) => {
+      const el = document.getElementById(id);
+      if (value) el.value = value;
+      if (lock) { el.readOnly = true; }
+    };
+    set("fullName", st.name, true);
+    set("rollNo", st.roll_no, true);
+    set("email", st.email, false);
+    for (const id of ["branch", "year"]) {
+      const el = document.getElementById(id);
+      // The college database uses full branch names (e.g. "Computer Science and Engineering"), so add it to the list if needed.
+      if (st[id] && ![...el.options].some((o) => o.value === st[id] || o.text === st[id])) el.add(new Option(st[id], st[id]));
+      el.value = st[id];
+      el.disabled = true; // the backend uses the saved record anyway
+    }
+  }
+  prefill();
+  form.addEventListener("reset", () => setTimeout(prefill, 0)); // "Clear form" keeps the student's own details
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+    try {
+      await GLB.api("/queries", { method: "POST", form: new FormData(form) });
+      statusMsg.textContent = "Your query has been submitted. The Dress Management team will contact you soon.";
+      statusMsg.className = "status-msg show success";
+      if (isAdmin) {
+        const link = document.createElement("a");
+        link.href = "queries.html";
+        link.textContent = "See it in the Query Inbox";
+        link.style.cssText = "margin-left:8px;font-weight:600;color:inherit;text-decoration:underline";
+        statusMsg.appendChild(link);
+      }
+      form.reset();
+    } catch (err) {
+      statusMsg.textContent = err.message || "Something went wrong while submitting your query. Please try again.";
+      statusMsg.className = "status-msg show error";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Query";
+    }
+  });
+</script>
+</body>
+</html>

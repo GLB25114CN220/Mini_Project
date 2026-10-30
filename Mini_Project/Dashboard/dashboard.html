@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GL Bajaj ITM | Dress Management</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo">GL</div>
+        <div class="brand-text">
+          <div class="brand-title">GL Bajaj ITM</div>
+          <div class="brand-subtitle">Dress Management</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" data-nav="dashboard" data-nav-style="dash"></nav>
+
+      <div class="sidebar-footer">
+        <div class="admin-avatar"></div>
+        <span>Admin Portal</span>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div class="main">
+
+      <!-- Top bar -->
+      <header class="topbar">
+        <div class="topbar-title">GL BAJAJ INSTITUTE OF TECHNOLOGY AND MANAGEMENT</div>
+        <div class="topbar-year">Academic Year: 2025–26 <span class="dot"></span></div>
+      </header>
+
+      <div class="content">
+
+        <!-- Hero banner -->
+        <section class="hero">
+          <div class="hero-crest">GL</div>
+          <div class="hero-text">
+            <div class="hero-eyebrow">Official Portal</div>
+            <h1 class="hero-heading">GL Bajaj Institute of Technology and Management</h1>
+            <p class="hero-sub">Dress &amp; Uniform Management System — Session 2025–26</p>
+          </div>
+        </section>
+
+        <!-- Dashboard heading -->
+        <div class="section-heading">
+          <h2>Dashboard Overview</h2>
+          <p>Real-time inventory and request statistics</p>
+        </div>
+
+        <!-- Stat cards -->
+        <section class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">👕</span>
+              <span class="stat-label">Total Items</span>
+            </div>
+            <div class="stat-value" id="stat-items">…</div>
+            <div class="stat-caption">Across all categories</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">⏳</span>
+              <span class="stat-label">Pending Requests</span>
+            </div>
+            <div class="stat-value" id="stat-pending">…</div>
+            <div class="stat-caption">Awaiting approval</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">📦</span>
+              <span class="stat-label">Dispatched</span>
+            </div>
+            <div class="stat-value" id="stat-dispatched">…</div>
+            <div class="stat-caption">This semester</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-icon">🎓</span>
+              <span class="stat-label">Students Enrolled</span>
+            </div>
+            <div class="stat-value" id="stat-students">…</div>
+            <div class="stat-caption">Active this session</div>
+          </div>
+        </section>
+
+        <!-- Bottom grid -->
+        <section class="bottom-grid">
+
+          <!-- Recent requests -->
+          <div class="panel requests-panel">
+            <div class="panel-header">
+              <h3>Recent Requests</h3>
+              <a href="All_requests.html" class="view-all">View all →</a>
+            </div>
+
+            <table class="requests-table">
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Item</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="recent-body"></tbody>
+            </table>
+          </div>
+
+          <!-- Stock summary -->
+          <div class="panel stock-panel">
+            <div class="panel-header">
+              <h3>Stock Summary</h3>
+            </div>
+
+            <div class="stock-list" id="stock-list"></div>
+          </div>
+
+        </section>
+
+        <!-- All sections -->
+        <div class="section-heading">
+          <h2>All Sections</h2>
+          <p>Every part of the portal, one click away</p>
+        </div>
+        <div id="all-sections"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="help-btn" title="Help" onclick="location.href='student_query.html'">?</div>
+
+<script>window.GLB_ACCESS = 'admin';</script>
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/sections.js"></script>
+</body>
+</html>

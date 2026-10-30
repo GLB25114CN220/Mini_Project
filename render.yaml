@@ -1,0 +1,30 @@
+# Render "Blueprint": tells Render how to run the website straight from this GitHub repository.
+# (Render dashboard -> New -> Blueprint -> pick this repo.)
+services:
+  - type: web
+    name: glbajaj-dress-management
+    runtime: node
+    plan: free                    # free = sleeps when idle and forgets orders on restart. See README ("Free vs paid").
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    healthCheckPath: /healthz
+    autoDeploy: true              # every push to GitHub updates the live website
+    envVars:
+      - key: NODE_VERSION
+        value: 22.14.0
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true       # Render creates a long random secret for you
+      - key: ADMIN_EMAIL
+        value: admin@glbajaj.ac.in
+      - key: ADMIN_PASSWORD
+        sync: false               # Render asks you to type it during setup (never stored in GitHub)
+      - key: COLLEGE_SYNC_MINUTES
+        value: "5"
+    # --- Keep orders/requests permanently (needs a PAID plan): change "plan" to starter, then un-comment: ---
+    # disk:
+    #   name: data
+    #   mountPath: /var/data
+    #   sizeGB: 1
+    # and add this environment variable:  DB_PATH = /var/data/dress.db

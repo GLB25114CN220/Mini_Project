@@ -1,0 +1,42 @@
+/* footer.css — dark navy footer (same navy + gold as the sidebar and banners). Built by js/footer.js. */
+.glb-footer {
+  --f-navy: #10182b; --f-line: rgba(255,255,255,.14); --f-text: #c4cbdb; --f-gold: #d4a437;
+  margin: 48px 0 4px; padding: 30px 34px 20px; background: var(--f-navy); color: var(--f-text); border-radius: 16px;
+  border-top: 4px solid var(--f-gold); font: 14px/1.6 "Segoe UI", Roboto, -apple-system, Arial, sans-serif; text-align: left;
+  display: grid; gap: 24px; animation: gfFade .45s ease both;
+}
+@keyframes gfFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+body > .glb-footer { width: min(1100px, 92%); margin: 44px auto 28px; }
+.glb-footer a { color: var(--f-text); text-decoration: none; transition: color .15s, transform .15s; }
+.glb-footer h3, .glb-footer h4 { margin: 0; color: #fff; }
+
+.gf-top { display: flex; align-items: center; justify-content: space-between; gap: 20px 30px; flex-wrap: wrap; padding-bottom: 24px; border-bottom: 1px solid var(--f-line); }
+.gf-brand { display: flex; align-items: center; gap: 16px; }
+.gf-logo { width: 58px; height: 58px; flex: none; border-radius: 14px; background: #fff; display: grid; place-items: center; box-shadow: 0 6px 16px rgba(0,0,0,.28); }
+.gf-brand h3 { font-size: 21px; line-height: 1.25; }
+.gf-brand p { margin: 3px 0 0; font-size: 14px; }
+
+.gf-social { display: flex; gap: 10px; flex-wrap: wrap; }
+.gf-social a { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border: 1px solid var(--f-line); border-radius: 999px; color: #fff; font-weight: 600; font-size: 13px; background: rgba(255,255,255,.04); }
+.gf-social a:hover { background: var(--f-gold); border-color: var(--f-gold); color: var(--f-navy); transform: translateY(-2px); }
+
+.gf-cols { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 28px; padding-bottom: 24px; border-bottom: 1px solid var(--f-line); }
+.gf-cols h4 { font-size: 17px; margin-bottom: 12px; }
+.gf-cols nav { display: grid; align-content: start; gap: 9px; }
+.gf-cols nav h4 { margin-bottom: 4px; }
+.gf-cols nav a:hover { color: var(--f-gold); transform: translateX(3px); }
+.gf-note p { margin: 0; max-width: 340px; }
+
+.gf-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 20px; font-size: 13px; color: #9aa3b8; }
+.gf-legal a { color: var(--f-text); }
+.gf-legal a:hover { color: var(--f-gold); }
+
+/* phones: same stacked look as the design — brand, two link columns, note, copyright */
+@media (max-width: 760px) {
+  .glb-footer { padding: 24px 20px 18px; gap: 20px; }
+  .gf-cols { grid-template-columns: 1fr 1fr; }
+  .gf-note { grid-column: 1 / -1; padding-top: 20px; border-top: 1px solid var(--f-line); }
+  .gf-bottom { flex-direction: column; text-align: center; align-items: center; }
+  .gf-brand h3 { font-size: 19px; }
+}
+@media (prefers-reduced-motion: reduce) { .glb-footer { animation: none; } }

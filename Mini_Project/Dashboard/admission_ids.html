@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission IDs | GL Bajaj ITM</title>
+<link rel="stylesheet" href="requests.css">
+<link rel="stylesheet" href="admission_ids.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- ---------- Sidebar ---------- -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">GL</div>
+      <div>
+        <div class="brand-name">GL Bajaj ITM</div>
+        <div class="brand-sub">DRESS MANAGEMENT</div>
+      </div>
+    </div>
+
+    <ul class="side-nav" data-nav="admission"></ul>
+
+    <div class="admin-portal">
+      <div class="admin-avatar">AD</div>
+      <div>
+        <div>Admin Portal</div>
+        <div class="admin-email">admin@glbajaj.ac.in</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ---------- Main content ---------- -->
+  <main class="main">
+    <div class="top-bar">
+      <span>GL BAJAJ INSTITUTE OF TECHNOLOGY AND MANAGEMENT</span>
+      <span>Academic Year: 2025–26<span class="year-dot"></span></span>
+    </div>
+
+    <h1 class="page-title">Admission IDs</h1>
+    <p class="page-subtitle" id="adm-count">Students must enter one of these IDs to open the Student Block</p>
+
+    <!-- College database connection -->
+    <div class="sync-card" id="sync-card">
+      <div class="sync-dot" id="sync-dot"></div>
+      <div class="sync-text"><b id="sync-title">College database</b><span id="sync-sub">Checking connection…</span></div>
+      <button class="primary-btn" id="sync-btn" type="button">Sync now</button>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-wrap">
+        <span class="search-icon">🔎</span>
+        <input type="search" id="adm-search" class="search-input" autocomplete="off"
+               placeholder="Search ID, name, roll no, branch or section">
+      </div>
+      <select id="adm-branch" class="search-input branch-filter" aria-label="Filter by branch"><option value="">All branches</option></select>
+      <button class="primary-btn" id="adm-add">+ Add Admission ID</button>
+    </div>
+    <p class="result-line" id="adm-result"></p>
+
+    <div class="table-card">
+      <table class="requests-table">
+        <thead>
+          <tr>
+            <th>Admission ID</th>
+            <th>Student</th>
+            <th>Branch / Section</th>
+            <th>Added</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="adm-body"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+<script>window.GLB_ACCESS = 'admin';</script>
+<script src="js/api.js"></script>
+<script src="js/admission_ids.js"></script>
+</body>
+</html>

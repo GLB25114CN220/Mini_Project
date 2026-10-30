@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard | GL Bajaj ITM Dress Management</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo">GL</div>
+        <div class="brand-text">
+          <div class="brand-title">GL Bajaj ITM</div>
+          <div class="brand-subtitle">Dress Management</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav" data-nav="home" data-nav-style="dash"></nav>
+      <div class="sidebar-footer admin-portal">
+        <div class="admin-avatar"></div>
+        <span>Portal</span>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-title">GL BAJAJ INSTITUTE OF TECHNOLOGY AND MANAGEMENT</div>
+        <div class="topbar-year">Academic Year: 2025–26 <span class="dot"></span></div>
+      </header>
+
+      <div class="content">
+        <section class="hero">
+          <div class="hero-crest">GL</div>
+          <div class="hero-text">
+            <div class="hero-eyebrow">Student Portal</div>
+            <h1 class="hero-heading" id="hello">Welcome</h1>
+            <p class="hero-sub" id="hello-sub">Dress &amp; Uniform Management System — Session 2025–26</p>
+          </div>
+        </section>
+
+        <div class="section-heading">
+          <h2>My Overview</h2>
+          <p>Your uniform requests at a glance</p>
+        </div>
+
+        <section class="stats-grid">
+          <div class="stat-card"><div class="stat-top"><span class="stat-icon">🧾</span><span class="stat-label">Total Requests</span></div><div class="stat-value" id="s-total">…</div><div class="stat-caption">All time</div></div>
+          <div class="stat-card"><div class="stat-top"><span class="stat-icon">⏳</span><span class="stat-label">Pending</span></div><div class="stat-value" id="s-pending">…</div><div class="stat-caption">Awaiting approval</div></div>
+          <div class="stat-card"><div class="stat-top"><span class="stat-icon">✅</span><span class="stat-label">Approved</span></div><div class="stat-value" id="s-approved">…</div><div class="stat-caption">Ready for dispatch</div></div>
+          <div class="stat-card"><div class="stat-top"><span class="stat-icon">🛒</span><span class="stat-label">In Cart</span></div><div class="stat-value" id="s-cart">…</div><div class="stat-caption">Not yet submitted</div></div>
+        </section>
+
+        <section class="bottom-grid">
+          <div class="panel requests-panel">
+            <div class="panel-header">
+              <h3>My Recent Requests</h3>
+              <a href="my_orders.html" class="view-all">View all →</a>
+            </div>
+            <table class="requests-table">
+              <thead><tr><th>Request</th><th>Item</th><th>Date</th><th>Status</th></tr></thead>
+              <tbody id="recent-body"></tbody>
+            </table>
+          </div>
+
+          <div class="panel stock-panel">
+            <div class="panel-header"><h3>My Details</h3></div>
+            <div class="stock-list" id="me"></div>
+          </div>
+        </section>
+
+        <div class="section-heading">
+          <h2>All Sections</h2>
+          <p>Everything available to you</p>
+        </div>
+        <div id="all-sections"></div>
+      </div>
+    </div>
+  </div>
+
+<script>window.GLB_ACCESS = 'student';</script>
+<script src="js/api.js"></script>
+<script>
+(async function () {
+  const { api, esc, toast } = GLB;
+  const set = (id, v) => { document.getElementById(id).textContent = v; };
+  let cart = 0;
+  try { cart = (JSON.parse(localStorage.getItem('glb_cart')) || []).length; } catch { /* ignore */ }
+  set('s-cart', cart);
+
+  try {
+    const [me, mine] = await Promise.all([api('/student/profile'), api('/student/requests')]);
+    if (me) {
+      set('hello', 'Welcome, ' + me.name.split(' ')[0]);
+      set('hello-sub', me.branch + ' · ' + me.year + ' · Roll No. ' + me.roll_no);
+      document.getElementById('me').innerHTML = [['Name', me.name], ['Roll number', me.roll_no], ['Branch', me.branch], ['Year', me.year], ['Admission ID', GLB.user.admission_id || '']]
+        .map(([k, v]) => `<div class="stock-item"><div class="stock-row"><span class="stock-name">${esc(k)}</span><span class="stock-count" style="font-size:13px">${esc(v)}</span></div></div>`).join('');
+    } else {
+      document.getElementById('me').innerHTML = '<div class="glb-empty">Your admission ID is not linked to a student record yet. Please contact the Dress Management office.</div>';
+    }
+    set('s-total', mine.length);
+    set('s-pending', mine.filter((r) => r.status === 'pending').length);
+    set('s-approved', mine.filter((r) => r.status === 'approved').length);
+    document.getElementById('recent-body').innerHTML = mine.length ? mine.slice(0, 5).map((r) => `
+      <tr><td><div class="student-name">${esc(r.request_code)}</div></td><td>${esc(r.item_name)} <span class="student-id">${esc(r.size)}</span></td>
+      <td class="date-cell">${esc(r.date)}</td><td><span class="badge badge-${esc(r.status)}">${esc(GLB.cap(r.status))}</span></td></tr>`).join('')
+      : '<tr><td colspan="4" class="glb-empty">No requests yet. Open the Dress Catalog to get started.</td></tr>';
+  } catch (e) {
+    toast(e.message, 'error');
+  }
+})();
+</script>
+<script src="js/sections.js"></script>
+</body>
+</html>

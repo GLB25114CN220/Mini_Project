@@ -1,0 +1,63 @@
+/* common.css — shared polish loaded by js/api.js on every logged-in page. */
+:root { --glb-navy:#10182b; --glb-gold:#d4a437; }
+html { scroll-behavior: smooth; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--glb-gold); outline-offset: 2px;
+}
+@keyframes glbFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.main, .content { animation: glbFade .35s ease both; }
+.sidebar { overflow-y: auto; }
+.glb-logout { transition: color .15s; }
+.glb-logout:hover { color: #fff; }
+.glb-toast { animation: glbFade .25s ease both; }
+
+/* mobile slide-in menu */
+.glb-burger, .glb-scrim { display: none; }
+@media (max-width: 860px) {
+  .layout, .app-shell { display: block !important; }
+  .sidebar {
+    position: fixed !important; inset: 0 auto 0 0; width: 260px !important; z-index: 1200;
+    transform: translateX(-102%); transition: transform .25s ease; height: 100vh;
+  }
+  body.glb-menu-open .sidebar { transform: none; box-shadow: 6px 0 30px rgba(0,0,0,.35); }
+  .glb-burger {
+    display: grid; place-items: center; position: fixed; top: 10px; left: 10px; z-index: 1100;
+    width: 42px; height: 42px; border: 0; border-radius: 10px; background: var(--glb-navy);
+    color: var(--glb-gold); font-size: 22px; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,.25);
+  }
+  .glb-scrim { position: fixed; inset: 0; background: rgba(16,24,43,.5); z-index: 1150; }
+  body.glb-menu-open .glb-scrim { display: block; }
+  .main { padding-top: 64px !important; }
+  .topbar, .top-bar { padding-left: 64px; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* "All sections" tiles (dashboard + student home) */
+.glb-sections { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; margin: 6px 0 28px; }
+.glb-tile {
+  display: flex; gap: 14px; align-items: flex-start; padding: 16px; background: #fff; border: 1px solid #e3e6ee;
+  border-radius: 12px; color: #10182b; text-decoration: none; transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.glb-tile:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(16,24,43,.12); border-color: var(--glb-gold); }
+.glb-tile-icon { width: 42px; height: 42px; flex: none; display: grid; place-items: center; border-radius: 10px; background: #10182b; font-size: 20px; }
+.glb-tile b { display: block; font-size: 14.5px; margin-bottom: 3px; }
+.glb-tile span { display: block; font-size: 12.5px; color: #6b7280; line-height: 1.45; }
+.glb-tile em { font-style: normal; display: inline-block; margin-top: 6px; font-size: 11.5px; font-weight: 700; color: #9a7515; }
+.glb-group-title { margin: 22px 0 8px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #9a7515; }
+
+/* bottom-left user badge */
+.sidebar-footer .admin-avatar { display: grid; place-items: center; flex: none; font-size: 11px; font-weight: 700; color: #fff; }
+.sidebar-footer { display: flex; align-items: center; gap: 10px; }
+
+/* ---- phones: nothing may push the page sideways ---- */
+@media (max-width: 860px) {
+  .tabs { flex-wrap: wrap; gap: 8px; }
+  .table-card { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .requests-table th, .requests-table td { white-space: nowrap; }
+  .top-bar, .topbar { flex-wrap: wrap; gap: 4px 12px; font-size: 11px; }
+  img, video, canvas { max-width: 100%; }
+}
+@media (max-width: 860px) {
+  .bottom-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .panel { min-width: 0; overflow-x: auto; }
+}

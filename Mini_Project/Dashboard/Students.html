@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Records | GL Bajaj ITM</title>
+<link rel="stylesheet" href="Students.css">
+<link rel="stylesheet" href="students_nav.css">
+</head>
+<body data-view="branches">
+<div class="app-shell">
+
+  <!-- ---------- Sidebar ---------- -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">GL</div>
+      <div>
+        <div class="brand-name">GL Bajaj ITM</div>
+        <div class="brand-sub">DRESS MANAGEMENT</div>
+      </div>
+    </div>
+
+    <ul class="side-nav" data-nav="students"></ul>
+
+    <div class="admin-portal">
+      <div class="admin-avatar">AD</div>
+      <div>
+        <div>Admin Portal</div>
+        <div class="admin-email">admin@glbajaj.ac.in</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ---------- Main content ---------- -->
+  <main class="main">
+    <div class="top-bar">
+      <span>GL BAJAJ INSTITUTE OF TECHNOLOGY AND MANAGEMENT</span>
+      <span>Academic Year: 2025–26<span class="year-dot"></span></span>
+    </div>
+
+    <div class="sn-head">
+      <h1 class="page-title">Student Records</h1>
+      <p class="page-subtitle">Choose a branch to see its sections and students. Students appear here automatically once they have an admission ID.</p>
+    </div>
+
+    <div class="search-row">
+      <input type="text" id="student-search" class="search-input" placeholder="Search any student: name, roll number, admission ID, branch or section...">
+      <a class="add-student-btn" href="admission_ids.html#add" style="display:inline-flex;align-items:center">+ Add Student</a>
+    </div>
+
+    <div id="sn-root"><p class="sn-empty">Loading branches…</p></div>
+  </main>
+</div>
+<script>window.GLB_ACCESS = 'admin';</script>
+<script src="js/api.js"></script>
+<script src="js/students.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dress Catalog — All Items | GL Bajaj ITM</title>
+<link rel="stylesheet" href="catalog.css?v=3">
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- ---------- Sidebar ---------- -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">GL</div>
+      <div>
+        <div class="brand-name">GL Bajaj ITM</div>
+        <div class="brand-sub">DRESS MANAGEMENT</div>
+      </div>
+    </div>
+
+    <ul class="side-nav" data-nav="catalog"></ul>
+
+    <div class="admin-portal">
+      <div class="admin-avatar">AD</div>
+      <div>
+        <div>Admin Portal</div>
+        <div class="admin-email">admin@glbajaj.ac.in</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ---------- Main content ---------- -->
+  <main class="main">
+    <div class="top-bar">
+      <span>GL BAJAJ INSTITUTE OF TECHNOLOGY AND MANAGEMENT</span>
+      <span>Academic Year: 2025–26<span class="year-dot"></span></span>
+    </div>
+
+    <h1 class="page-title">Dress Catalog</h1>
+    <p class="page-subtitle">Browse and manage all uniform inventory</p>
+
+    <nav class="tabs">
+      <a href="all_items.html" class="active">All Items</a>
+      <a href="Winters_dress.html">Winter's Dress</a>
+      <a href="Summers_dress.html">Summer's Dress</a>
+    </nav>
+
+    <section class="card-grid" id="card-grid" data-season="all"></section>
+  </main>
+</div>
+<script>window.GLB_ACCESS = 'student';</script>
+<script src="js/api.js"></script>
+<script src="js/catalog.js?v=3"></script>
+</body>
+</html>

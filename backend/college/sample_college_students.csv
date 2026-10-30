@@ -1,0 +1,97 @@
+﻿student_name,branch_code,branch_name,section,roll_number,admission_id,academic_year
+Shaurya Sharma,CSE,Computer Science and Engineering,A,GLB26-CSE-A-001,ADM-2026-0001,2026-27
+Pari Bhardwaj,CSE,Computer Science and Engineering,A,GLB26-CSE-A-002,ADM-2026-0002,2026-27
+Myra Yadav,CSE,Computer Science and Engineering,A,GLB26-CSE-A-003,ADM-2026-0003,2026-27
+Krishna Sinha,CSE,Computer Science and Engineering,A,GLB26-CSE-A-004,ADM-2026-0004,2026-27
+Ishaan Kapoor,CSE,Computer Science and Engineering,A,GLB26-CSE-A-005,ADM-2026-0005,2026-27
+Meera Verma,CSE,Computer Science and Engineering,A,GLB26-CSE-A-006,ADM-2026-0006,2026-27
+Vivaan Gupta,CSE,Computer Science and Engineering,A,GLB26-CSE-A-007,ADM-2026-0007,2026-27
+Diya Bhardwaj,CSE,Computer Science and Engineering,A,GLB26-CSE-A-008,ADM-2026-0008,2026-27
+Tanvi Das,CSE,Computer Science and Engineering,B,GLB26-CSE-B-001,ADM-2026-0009,2026-27
+Vivaan Sinha,CSE,Computer Science and Engineering,B,GLB26-CSE-B-002,ADM-2026-0010,2026-27
+Saanvi Sinha,CSE,Computer Science and Engineering,B,GLB26-CSE-B-003,ADM-2026-0011,2026-27
+Karan Bhardwaj,CSE,Computer Science and Engineering,B,GLB26-CSE-B-004,ADM-2026-0012,2026-27
+Aman Kapoor,CSE,Computer Science and Engineering,B,GLB26-CSE-B-005,ADM-2026-0013,2026-27
+Pari Sharma,CSE,Computer Science and Engineering,B,GLB26-CSE-B-006,ADM-2026-0014,2026-27
+Ananya Saxena,CSE,Computer Science and Engineering,B,GLB26-CSE-B-007,ADM-2026-0015,2026-27
+Shresth Jain,CSE,Computer Science and Engineering,B,GLB26-CSE-B-008,ADM-2026-0016,2026-27
+Kabir Agarwal,CSE-DS,Computer Science and Engineering (Data Science),A,GLB26-DS-A-001,ADM-2026-0017,2026-27
+Shresth Singh,CSE-DS,Computer Science and Engineering (Data Science),A,GLB26-DS-A-002,ADM-2026-0018,2026-27
+Ishaan Chauhan,CSE-DS,Computer Science and Engineering (Data Science),A,GLB26-DS-A-003,ADM-2026-0019,2026-27
+Krishna Malhotra,CSE-DS,Computer Science and Engineering (Data Science),A,GLB26-DS-A-004,ADM-2026-0020,2026-27
+Priya Das,CSE-DS,Computer Science and Engineering (Data Science),A,GLB26-DS-A-005,ADM-2026-0021,2026-27
+Anika Verma,CSE-DS,Computer Science and Engineering (Data Science),A,GLB26-DS-A-006,ADM-2026-0022,2026-27
+Simran Sinha,CSE-DS,Computer Science and Engineering (Data Science),A,GLB26-DS-A-007,ADM-2026-0023,2026-27
+Shaurya Chauhan,CSE-DS,Computer Science and Engineering (Data Science),A,GLB26-DS-A-008,ADM-2026-0024,2026-27
+Ishaan Sinha,CSE-DS,Computer Science and Engineering (Data Science),B,GLB26-DS-B-001,ADM-2026-0025,2026-27
+Riya Das,CSE-DS,Computer Science and Engineering (Data Science),B,GLB26-DS-B-002,ADM-2026-0026,2026-27
+Rahul Kapoor,CSE-DS,Computer Science and Engineering (Data Science),B,GLB26-DS-B-003,ADM-2026-0027,2026-27
+Saanvi Gupta,CSE-DS,Computer Science and Engineering (Data Science),B,GLB26-DS-B-004,ADM-2026-0028,2026-27
+Aditya Bhardwaj,CSE-DS,Computer Science and Engineering (Data Science),B,GLB26-DS-B-005,ADM-2026-0029,2026-27
+Riya Gupta,CSE-DS,Computer Science and Engineering (Data Science),B,GLB26-DS-B-006,ADM-2026-0030,2026-27
+Myra Singh,CSE-DS,Computer Science and Engineering (Data Science),B,GLB26-DS-B-007,ADM-2026-0031,2026-27
+Neha Jain,CSE-DS,Computer Science and Engineering (Data Science),B,GLB26-DS-B-008,ADM-2026-0032,2026-27
+Simran Malhotra,IT,Information Technology,A,GLB26-IT-A-001,ADM-2026-0033,2026-27
+Ananya Malhotra,IT,Information Technology,A,GLB26-IT-A-002,ADM-2026-0034,2026-27
+Priya Agarwal,IT,Information Technology,A,GLB26-IT-A-003,ADM-2026-0035,2026-27
+Pari Gupta,IT,Information Technology,A,GLB26-IT-A-004,ADM-2026-0036,2026-27
+Ishita Mishra,IT,Information Technology,A,GLB26-IT-A-005,ADM-2026-0037,2026-27
+Pooja Bhardwaj,IT,Information Technology,A,GLB26-IT-A-006,ADM-2026-0038,2026-27
+Ananya Pandey,IT,Information Technology,A,GLB26-IT-A-007,ADM-2026-0039,2026-27
+Neha Jain,IT,Information Technology,A,GLB26-IT-A-008,ADM-2026-0040,2026-27
+Abhinav Bhardwaj,IT,Information Technology,B,GLB26-IT-B-001,ADM-2026-0041,2026-27
+Yash Verma,IT,Information Technology,B,GLB26-IT-B-002,ADM-2026-0042,2026-27
+Myra Verma,IT,Information Technology,B,GLB26-IT-B-003,ADM-2026-0043,2026-27
+Yash Chauhan,IT,Information Technology,B,GLB26-IT-B-004,ADM-2026-0044,2026-27
+Pari Gupta,IT,Information Technology,B,GLB26-IT-B-005,ADM-2026-0045,2026-27
+Diya Kapoor,IT,Information Technology,B,GLB26-IT-B-006,ADM-2026-0046,2026-27
+Yash Agarwal,IT,Information Technology,B,GLB26-IT-B-007,ADM-2026-0047,2026-27
+Nisha Chauhan,IT,Information Technology,B,GLB26-IT-B-008,ADM-2026-0048,2026-27
+Simran Yadav,ECE,Electronics and Communication Engineering,A,GLB26-ECE-A-001,ADM-2026-0049,2026-27
+Anika Yadav,ECE,Electronics and Communication Engineering,A,GLB26-ECE-A-002,ADM-2026-0050,2026-27
+Ira Sinha,ECE,Electronics and Communication Engineering,A,GLB26-ECE-A-003,ADM-2026-0051,2026-27
+Pooja Jain,ECE,Electronics and Communication Engineering,A,GLB26-ECE-A-004,ADM-2026-0052,2026-27
+Manav Saxena,ECE,Electronics and Communication Engineering,A,GLB26-ECE-A-005,ADM-2026-0053,2026-27
+Manav Chauhan,ECE,Electronics and Communication Engineering,A,GLB26-ECE-A-006,ADM-2026-0054,2026-27
+Rahul Bhardwaj,ECE,Electronics and Communication Engineering,A,GLB26-ECE-A-007,ADM-2026-0055,2026-27
+Atharv Joshi,ECE,Electronics and Communication Engineering,A,GLB26-ECE-A-008,ADM-2026-0056,2026-27
+Nisha Gupta,ECE,Electronics and Communication Engineering,B,GLB26-ECE-B-001,ADM-2026-0057,2026-27
+Arjun Singh,ECE,Electronics and Communication Engineering,B,GLB26-ECE-B-002,ADM-2026-0058,2026-27
+Kabir Mishra,ECE,Electronics and Communication Engineering,B,GLB26-ECE-B-003,ADM-2026-0059,2026-27
+Meera Das,ECE,Electronics and Communication Engineering,B,GLB26-ECE-B-004,ADM-2026-0060,2026-27
+Reyansh Chauhan,ECE,Electronics and Communication Engineering,B,GLB26-ECE-B-005,ADM-2026-0061,2026-27
+Neha Das,ECE,Electronics and Communication Engineering,B,GLB26-ECE-B-006,ADM-2026-0062,2026-27
+Simran Joshi,ECE,Electronics and Communication Engineering,B,GLB26-ECE-B-007,ADM-2026-0063,2026-27
+Anika Sinha,ECE,Electronics and Communication Engineering,B,GLB26-ECE-B-008,ADM-2026-0064,2026-27
+Aarav Singh,ME,Mechanical Engineering,A,GLB26-ME-A-001,ADM-2026-0065,2026-27
+Pooja Jain,ME,Mechanical Engineering,A,GLB26-ME-A-002,ADM-2026-0066,2026-27
+Shresth Singh,ME,Mechanical Engineering,A,GLB26-ME-A-003,ADM-2026-0067,2026-27
+Riya Saxena,ME,Mechanical Engineering,A,GLB26-ME-A-004,ADM-2026-0068,2026-27
+Ananya Pandey,ME,Mechanical Engineering,A,GLB26-ME-A-005,ADM-2026-0069,2026-27
+Aarav Jain,ME,Mechanical Engineering,A,GLB26-ME-A-006,ADM-2026-0070,2026-27
+Tanvi Mishra,ME,Mechanical Engineering,A,GLB26-ME-A-007,ADM-2026-0071,2026-27
+Tanvi Singh,ME,Mechanical Engineering,A,GLB26-ME-A-008,ADM-2026-0072,2026-27
+Kavya Joshi,ME,Mechanical Engineering,B,GLB26-ME-B-001,ADM-2026-0073,2026-27
+Ishita Agarwal,ME,Mechanical Engineering,B,GLB26-ME-B-002,ADM-2026-0074,2026-27
+Kabir Malhotra,ME,Mechanical Engineering,B,GLB26-ME-B-003,ADM-2026-0075,2026-27
+Ananya Sinha,ME,Mechanical Engineering,B,GLB26-ME-B-004,ADM-2026-0076,2026-27
+Harsh Sharma,ME,Mechanical Engineering,B,GLB26-ME-B-005,ADM-2026-0077,2026-27
+Ishita Mehta,ME,Mechanical Engineering,B,GLB26-ME-B-006,ADM-2026-0078,2026-27
+Nisha Sharma,ME,Mechanical Engineering,B,GLB26-ME-B-007,ADM-2026-0079,2026-27
+Shaurya Malhotra,ME,Mechanical Engineering,B,GLB26-ME-B-008,ADM-2026-0080,2026-27
+Kavya Bhardwaj,CE,Civil Engineering,A,GLB26-CE-A-001,ADM-2026-0081,2026-27
+Arjun Bhardwaj,CE,Civil Engineering,A,GLB26-CE-A-002,ADM-2026-0082,2026-27
+Sakshi Gupta,CE,Civil Engineering,A,GLB26-CE-A-003,ADM-2026-0083,2026-27
+Ishaan Rana,CE,Civil Engineering,A,GLB26-CE-A-004,ADM-2026-0084,2026-27
+Reyansh Sinha,CE,Civil Engineering,A,GLB26-CE-A-005,ADM-2026-0085,2026-27
+Atharv Yadav,CE,Civil Engineering,A,GLB26-CE-A-006,ADM-2026-0086,2026-27
+Dev Sinha,CE,Civil Engineering,A,GLB26-CE-A-007,ADM-2026-0087,2026-27
+Ananya Jain,CE,Civil Engineering,A,GLB26-CE-A-008,ADM-2026-0088,2026-27
+Harsh Das,CE,Civil Engineering,B,GLB26-CE-B-001,ADM-2026-0089,2026-27
+Meera Agarwal,CE,Civil Engineering,B,GLB26-CE-B-002,ADM-2026-0090,2026-27
+Pooja Agarwal,CE,Civil Engineering,B,GLB26-CE-B-003,ADM-2026-0091,2026-27
+Kavya Chauhan,CE,Civil Engineering,B,GLB26-CE-B-004,ADM-2026-0092,2026-27
+Rahul Pandey,CE,Civil Engineering,B,GLB26-CE-B-005,ADM-2026-0093,2026-27
+Harsh Pandey,CE,Civil Engineering,B,GLB26-CE-B-006,ADM-2026-0094,2026-27
+Shaurya Bhardwaj,CE,Civil Engineering,B,GLB26-CE-B-007,ADM-2026-0095,2026-27
+Myra Gupta,CE,Civil Engineering,B,GLB26-CE-B-008,ADM-2026-0096,2026-27
